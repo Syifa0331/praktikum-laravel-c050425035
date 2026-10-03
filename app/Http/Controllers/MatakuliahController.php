@@ -12,7 +12,7 @@ class MatakuliahController extends Controller
      */
     public function index()
     {
-        //
+        return 'index: Halaman daftar seluruh matakuliah';
     }
 
     /**
@@ -20,7 +20,7 @@ class MatakuliahController extends Controller
      */
     public function create()
     {
-        //
+        return 'create: form tambah matakuliah';
     }
 
     /**
@@ -28,7 +28,7 @@ class MatakuliahController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return 'store: simpan data baru';
     }
 
     /**
@@ -36,15 +36,19 @@ class MatakuliahController extends Controller
      */
     public function show(matakuliah $matakuliah)
     {
-        //
+        //$matakuliah = matakuliah::where('kode_mk', $kode)->firstOrFail();
+
+        //return view('matakuliah', compact('matakuliah'));
+
+        return "Nama matakuliah: {$matakuliah->nama_mk}";
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(matakuliah $matakuliah)
+    public function edit($id)
     {
-        //
+        return "edit: form edit matakuliah id {$id}";
     }
 
     /**
