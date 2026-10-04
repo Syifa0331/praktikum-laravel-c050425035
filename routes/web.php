@@ -41,7 +41,7 @@ Route::resource('mahasiswa', MahasiswaController::class);
   // ->where('nim', '[A-Za-z0-9]+')
   // ->name('mahasiswa.show');
 
-Route::get('/matakuliah',[MatakuliahController::class, 'index'])->name('mahasiswa.index');
+//Route::get('/matakuliah',[MatakuliahController::class, 'index'])->name('mahasiswa.index');
 Route::resource('matakuliah', MatakuliahController::class)->only(['index', 'show', 'create', 'store']);
 //Route::get('/matakuliah/{kode}', [MatakuliahController::class, 'show'])
   // ->where('kode', '[A-Za-z0-9]+')

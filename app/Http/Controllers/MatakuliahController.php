@@ -12,7 +12,8 @@ class MatakuliahController extends Controller
      */
     public function index()
     {
-        return 'index: Halaman daftar seluruh matakuliah';
+        $matakuliah = matakuliah::all();
+        return view('matakuliah.index', compact('matakuliah'));
     }
 
     /**
@@ -36,11 +37,7 @@ class MatakuliahController extends Controller
      */
     public function show(matakuliah $matakuliah)
     {
-        //$matakuliah = matakuliah::where('kode_mk', $kode)->firstOrFail();
-
-        //return view('matakuliah', compact('matakuliah'));
-
-        return "Nama matakuliah: {$matakuliah->nama_mk}";
+        return view('matakuliah.show', compact('matakuliah'));
     }
 
     /**

@@ -12,7 +12,8 @@ class MahasiswaController extends Controller
      */
     public function index()
     {
-        return 'index: daftar mahasiswa';
+        $mahasiswa = Mahasiswa::all();
+        return view('mahasiswa.index', compact('mahasiswa'));
     }
 
     /**
@@ -36,11 +37,7 @@ class MahasiswaController extends Controller
      */
     public function show(Mahasiswa $mahasiswa)
     {
-        //$mahasiswa = Mahasiswa::where('nim', $nim)->firstOrFail();
-
-        //return view('mahasiswa', compact('mahasiswa'));
-
-        return "Nama mahasiswa: {$mahasiswa->nama}";
+        return view('mahasiswa.show', compact('mahasiswa'));
 
     }
 
