@@ -21,7 +21,7 @@ class MatakuliahController extends Controller
      */
     public function create()
     {
-        return 'create: form tambah matakuliah';
+        //
     }
 
     /**
@@ -29,7 +29,7 @@ class MatakuliahController extends Controller
      */
     public function store(Request $request)
     {
-        return 'store: simpan data baru';
+        //
     }
 
     /**
@@ -43,9 +43,9 @@ class MatakuliahController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit(matakuliah $matakuliah)
     {
-        return "edit: form edit matakuliah id {$id}";
+        //
     }
 
     /**
